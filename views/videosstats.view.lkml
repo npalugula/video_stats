@@ -57,4 +57,8 @@ view: videosstats {
     approximate_threshold: 100000
     drill_fields: []
   }
+  measure: Is_Count_morethan_50 {
+    type: number
+    sql:  case when ${count} > 50  then 1 else 0 end ;;
+  }
 }
